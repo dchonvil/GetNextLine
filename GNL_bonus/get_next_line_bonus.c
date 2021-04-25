@@ -19,7 +19,7 @@ int		check_next_line(char *save)
 	if (!save)
 		return (0);
 	c = 0;
-	while (save[c])
+	while (save[c] != '\0')
 	{
 		if (save[c] == '\n')
 			return (1);

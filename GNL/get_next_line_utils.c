@@ -61,12 +61,12 @@ char	*render(char *save)
 	if (!save)
 		return (NULL);
 	c = 0;
-	while (save[c] && save[c] != '\n')
+	while (save[c] != '\0' && save[c] != '\n')
 		c++;
 	if (!(box = malloc(sizeof(char) * (c + 1))))
 		return (NULL);
 	c = 0;
-	while (save[c] && save[c] != '\n')
+	while (save[c] != '\0' && save[c] != '\n')
 	{
 		box[c] = save[c];
 		c++;
