@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line_utils_bonus.c                        :+:      :+:    :+:   */
+/*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dchonvil <dchonvil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/25 02:51:02 by dchonvil          #+#    #+#             */
-/*   Updated: 2021/11/29 06:27:14 by dchonvil         ###   ########.fr       */
+/*   Created: 2021/04/19 09:36:02 by dchonvil          #+#    #+#             */
+/*   Updated: 2021/10/30 04:05:07 by dchonvil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line_bonus.h"
+#include "get_next_line.h"
 
 void	saver(char *save, char *box, int c)
 {
@@ -62,13 +62,13 @@ char	*render(char *save)
 	if (!save)
 		return (NULL);
 	c = 0;
-	while (save[c] != '\0' && save[c] != '\n')
+	while (save[c] && save[c] != '\n')
 		c++;
 	box = malloc(sizeof(char) * (c + 1));
 	if (!box)
 		return (NULL);
 	c = 0;
-	while (save[c] != '\0' && save[c] != '\n')
+	while (save[c] && save[c] != '\n')
 	{
 		box[c] = save[c];
 		c++;
